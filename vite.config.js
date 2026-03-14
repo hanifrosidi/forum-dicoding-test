@@ -7,6 +7,9 @@ import path from "path";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(), tsconfigPaths()],
+  build: {
+    outDir: "dist",
+  },
   test: {
     globals: true,
     environment: "jsdom",
