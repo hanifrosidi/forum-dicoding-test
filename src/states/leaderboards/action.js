@@ -18,13 +18,10 @@ function receiveLeaderboardsActionCreator(leaderboards) {
 function asyncPopulateLeaderboards() {
   return async (dispatch) => {
     try {
-      dispatch(setLoading(true));
       const leaderboards = await api.getLeaderBoards();
       dispatch(receiveLeaderboardsActionCreator(leaderboards));
     } catch (error) {
       alert(error.message);
-    } finally {
-      dispatch(setLoading(false));
     }
   };
 }

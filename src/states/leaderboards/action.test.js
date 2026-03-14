@@ -56,11 +56,9 @@ describe("asyncPopulateLeaderboards thunk", () => {
     await asyncPopulateLeaderboards()(dispatch);
 
     // Assert
-    expect(dispatch).toHaveBeenCalledWith(setLoading(true));
     expect(dispatch).toHaveBeenCalledWith(
       receiveLeaderboardsActionCreator(fakeLeaderboardsResponse),
     );
-    expect(dispatch).toHaveBeenCalledWith(setLoading(false));
   });
 
   it("should dispatch action and call alert correctly when data fetching failed", async () => {
@@ -75,8 +73,6 @@ describe("asyncPopulateLeaderboards thunk", () => {
     await asyncPopulateLeaderboards()(dispatch);
 
     // Assert
-    expect(dispatch).toHaveBeenCalledWith(setLoading(true));
     expect(window.alert).toHaveBeenCalledWith(fakeErrorResponse.message);
-    expect(dispatch).toHaveBeenCalledWith(setLoading(false));
   });
 });
