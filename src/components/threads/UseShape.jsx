@@ -1,0 +1,8 @@
+import PropTypes from "prop-types";
+
+export const userShape = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string,
+  avatar: PropTypes.string.isRequired,
+};
