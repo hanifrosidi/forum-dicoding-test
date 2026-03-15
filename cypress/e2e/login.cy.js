@@ -60,17 +60,10 @@ describe("login spec", () => {
     cy.get("input[placeholder='password']").type("DicodingOkeBGT");
 
     cy.get("button")
-<<<<<<< HEAD
-      .contains(/^keluar$/)
+      .contains(/^Masuk$/)
       .click();
 
-    cy.contains("keluar").click();
-=======
-      .contains(/^Keluar$/)
-      .click();
-
-    cy.contains("Keluar").click();
->>>>>>> parent of 9d6836c (change pass scenario)
+    cy.contains("Masuk").click();
 
     cy.url().should("not.include", "/login");
   });
