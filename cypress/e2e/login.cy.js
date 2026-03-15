@@ -66,11 +66,5 @@ describe("login spec", () => {
     cy.contains("Masuk").click();
 
     cy.url().should("not.include", "/login");
-
-    // cy.contains("Logout", { timeout: 10000 }).should("be.visible");
-
-    // cy.get("button")
-    //   .contains(/^Logout$/, { timeout: 10000 })
-    //   .should("be.visible");
   });
 });
