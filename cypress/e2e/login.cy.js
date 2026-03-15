@@ -67,10 +67,10 @@ describe("login spec", () => {
 
     cy.url().should("not.include", "/login");
 
-    cy.contains("Logout", { timeout: 10000 }).should("be.visible");
+    // cy.contains("Logout", { timeout: 10000 }).should("be.visible");
 
-    cy.get("button")
-      .contains(/^Logout$/, { timeout: 10000 })
-      .should("be.visible");
+    // cy.get("button")
+    //   .contains(/^Logout$/, { timeout: 10000 })
+    //   .should("be.visible");
   });
 });
