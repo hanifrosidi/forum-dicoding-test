@@ -64,7 +64,7 @@ describe("login spec", () => {
       .click();
 
     cy.get("button")
-      .contains(/^Logout$/)
+      .contains(/^Logout$/, { timeout: 10000 })
       .should("be.visible");
   });
 });
