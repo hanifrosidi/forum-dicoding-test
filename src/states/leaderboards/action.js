@@ -1,6 +1,5 @@
 import api from "@/utils/api";
 import { setLoading } from "../loading/action";
-// import { setLoading } from "../loading/action";
 
 const ActionType = {
   RECEIVE_LEADERBOARDS: "RECEIVE_LEADERBOARDS",
