@@ -10,7 +10,9 @@
     "preview": "vite preview",
     "e2e": "cypress run",
     "test": "vitest",
-    "ci:test": "vitest --run && start-server-and-test dev http-get://localhost:5173 e2e"
+    "ci:test": "vitest --run && start-server-and-test dev http-get://localhost:5173 e2e",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.33.0",
@@ -37,6 +39,11 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@storybook/addon-a11y": "^10.2.19",
+    "@storybook/addon-docs": "^10.2.19",
+    "@storybook/addon-onboarding": "^10.2.19",
+    "@storybook/preset-create-react-app": "^10.2.19",
+    "@storybook/react-webpack5": "^10.2.19",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
@@ -47,12 +54,16 @@
     "cypress": "^15.11.0",
     "eslint": "^10.0.2",
     "eslint-config-dicodingacademy": "^0.9.5",
+    "eslint-plugin-cypress": "^6.2.0",
+    "eslint-plugin-storybook": "^10.2.19",
     "globals": "^16.5.0",
     "jest": "^30.3.0",
     "jsdom": "^28.1.0",
     "start-server-and-test": "^2.1.5",
+    "storybook": "^10.2.19",
     "vite": "^7.3.1",
     "vite-tsconfig-paths": "^6.1.1",
-    "vitest": "^4.1.0"
+    "vitest": "^4.1.0",
+    "webpack": "^5.105.4"
   }
 }
